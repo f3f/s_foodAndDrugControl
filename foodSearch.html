@@ -1,0 +1,461 @@
+
+
+
+<!doctype html>
+<html id="foodSearch">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="foodIndex.html">
+            <div>
+                <img src="images/icon-navleft2.png" alt="">
+            </div>
+            <span>食品预警</span>
+        </a>
+    </li>
+    <li>
+        <a href="foodTraceability.html">
+            <div>
+                <img src="images/icon-navleft1.png" alt="">
+            </div>
+            <span>食品溯源</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="top">
+        <div class="search-toolbar">
+            <ul>
+                <li>
+                    <label>产品名称</label>
+                    <input id="product" type="text">
+                </li>
+                <li class="second-input">
+                    <label>批次号</label>
+                    <input id="number" type="text">
+                    <span class="button-border-box">
+                        <input type="button" value="查询">
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="checkbox-group">
+            <label class="categroy">分类</label>
+            <ul>
+                <li>
+                    <input id="no1" type="checkbox" class="hidden-box">
+                    <label for="no1" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">乳制品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no2" type="checkbox" class="hidden-box">
+                    <label for="no2" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">酒</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no3" type="checkbox" class="hidden-box">
+                    <label for="no3" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">畜产品及其制品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no4" type="checkbox" class="hidden-box">
+                    <label for="no4" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">禽及其产品、制品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no5" type="checkbox" class="hidden-box">
+                    <label for="no5" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">粮食及其制品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no6" type="checkbox" class="hidden-box">
+                    <label for="no6" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">水</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no7" type="checkbox" class="hidden-box">
+                    <label for="no7" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">豆制品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no8" type="checkbox" class="hidden-box">
+                    <label for="no8" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">水果</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no9" type="checkbox" class="hidden-box">
+                    <label for="no9" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">蔬菜</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="content">
+            <div class="list">
+                <ul>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/baiCaoWeiGuoGan.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>百草味水果干 芒果干120g 蜜饯零食小吃果脯</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：120g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/kaKeMan200g.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>卜珂蔓越莓曲奇饼干</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：200g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/gangRongZhengDanGao.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>港荣蒸蛋糕1kg整箱</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：1kg</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/haoLiYouXinBing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>好丽友巧克力派涂饰蛋类芯饼</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：30枚</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/haoLiYouShuPian.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>好丽友薯愿薯片三连包</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：三连包</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/liangPinPuZiYaoGuo.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>良品铺子炭烧腰果仁</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：238g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/quDuoDuoBingGan.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>趣多多巧克力曲奇饼干原味</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：285g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/sanZhiSongShuBiGenGuo.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>三只松鼠奶油碧根果</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：238g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/baiCaoWeiGuoGan.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>百草味水果干 芒果干120g 蜜饯零食小吃果脯</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：120g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/kaKeMan200g.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>卜珂蔓越莓曲奇饼干</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：200g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/gangRongZhengDanGao.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>港荣蒸蛋糕1kg整箱</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：1kg</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/haoLiYouXinBing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>好丽友巧克力派涂饰蛋类芯饼</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：30枚</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/haoLiYouShuPian.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>好丽友薯愿薯片三连包</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：三连包</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/liangPinPuZiYaoGuo.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>良品铺子炭烧腰果仁</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：238g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/quDuoDuoBingGan.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>趣多多巧克力曲奇饼干原味</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：285g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/sanZhiSongShuBiGenGuo.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>三只松鼠奶油碧根果</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：238g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                    <li>
+                        <div class="img-box">
+                            <img src="images/baiCaoWeiGuoGan.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <p>百草味水果干 芒果干120g 蜜饯零食小吃果脯</p>
+                            <p>产品编号：384630</p>
+                            <p>规格：120g</p>
+                        </div>
+                    </li>
+                </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/kaKeMan200g.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>卜珂蔓越莓曲奇饼干</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：200g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/gangRongZhengDanGao.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>港荣蒸蛋糕1kg整箱</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：1kg</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/haoLiYouXinBing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>好丽友巧克力派涂饰蛋类芯饼</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：30枚</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/haoLiYouShuPian.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>好丽友薯愿薯片三连包</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：三连包</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/liangPinPuZiYaoGuo.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>良品铺子炭烧腰果仁</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：238g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/quDuoDuoBingGan.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>趣多多巧克力曲奇饼干原味</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：285g</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="foodTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/sanZhiSongShuBiGenGuo.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>三只松鼠奶油碧根果</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：238g</p>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="pagtion">
+                <span><</span>
+                <a href="javascript:;" class="active">1</a>
+                <a href="javascript:;">2</a>
+                <a href="javascript:;">3</a>
+                <a href="javascript:;">4</a>
+                <a href="javascript:;">5</a>
+                <a href="javascript:;">6</a>
+                <a href="javascript:;">7</a>
+                <a href="javascript:;">8</a>
+                <a href="javascript:;">9</a>
+                <span>></span>
+            </div>
+        </div>
+    </div>
+</section>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

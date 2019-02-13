@@ -1,0 +1,327 @@
+
+
+
+<!doctype html>
+<html id="creditSet">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="creditEnterpriseIndex.html">
+            <div>
+                <img src="images/credit-icon-1.png" alt="">
+            </div>
+            <span>信用管理</span>
+        </a>
+    </li>
+    <li>
+        <a href="creditSet.html">
+            <div>
+                <img src="images/credit-icon-2.png" alt="">
+            </div>
+            <span>信用设置</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="first clear">
+        <div class="left clear">
+            <ul>
+                <li>
+                    <label>数据类别</label>
+                    <select class="js-select">
+                        <option value="企业基础数据信息">企业基础数据信息</option>
+                        <option value="企业资质资格信息">企业资质资格信息</option>
+                        <option value="企业经营状况信息">企业经营状况信息</option>
+                        <option value="企业荣誉信息">企业荣誉信息</option>
+                        <option value="企业违法违规信息">企业违法违规信息</option>
+                        <option value="企业经营者信用信息">企业经营者信用信息</option>
+                    </select>
+                </li>
+                <li>
+                    <label>评分项</label>
+                    <select class="js-select">
+                        <option value="注册资本">注册资本</option>
+                        <option value="经营范围">经营范围</option>
+                        <option value="成立日期">成立日期</option>
+                        <option value="企业专项许可记录、认证记录">企业专项许可记录、认证记录</option>
+                    </select>
+                </li>
+            </ul>
+            <p class="tip">
+                根据数据库字段一一对应得出，分数可配置
+            </p>
+        </div>
+        <div class="right clear">
+            <div class="r-left">
+                <div class="content-title clear">
+                    <span class="a">指标项目</span>
+                    <span class="b">分数设置</span>
+                </div>
+                <ul class="clear">
+                    <li>
+                        <span>100万以下</span>
+                        <input type="text" value="0">
+                    </li>
+                    <li>
+                        <span>100万以下</span>
+                        <input type="text" value="+5">
+                    </li>
+                    <li>
+                        <span>100万以下</span>
+                        <input type="text" value="+10">
+                    </li>
+                </ul>
+            </div>
+            <div class="r-right">
+                <span class="button-border-box ">
+                    <input type="button" value="添加指标">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="second clear">
+        <h2>评估方案</h2>
+        <ul class="u-th">
+            <li class="w-1">类别</li>
+            <li class="w-2">评分项</li>
+            <li class="w-3">内容及分值</li>
+            <li class="w-4">积分计算有效期</li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1">工商信息</li>
+            <li class="w-2">依法许可</li>
+            <li class="w-3">
+                <span class="select-circle">
+                    <img src="images/xinYongSheZhiicon01_03.png" alt="">
+                    <label>是</label>
+                </span>
+                <span class="select-circle">
+                    <img src="images/xinYongSheZhiicon01_05.png" alt="">
+                    <label>否</label>
+                </span>
+            </li>
+            <li class="w-4">-</li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">登记备案</li>
+            <li class="w-3">
+                <span class="select-circle">
+                    <img src="images/xinYongSheZhiicon01_03.png" alt="">
+                    <label>是</label>
+                </span>
+                <span class="select-circle">
+                    <img src="images/xinYongSheZhiicon01_05.png" alt="">
+                    <label>否</label>
+                </span>
+            </li>
+            <li class="w-4">-</li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2"></li>
+            <li class="w-3">
+
+            </li>
+            <li class="w-4">-</li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">企业性质</li>
+            <li class="w-3">
+            </li>
+            <li class="w-4">-</li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1">监督检查</li>
+            <li class="w-2">抽查出不合格产品</li>
+            <li class="w-3">
+                不予行政处罚
+                <input class="table-input" type="text" value="+1">
+                分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">违反质量监管规范</li>
+            <li class="w-3">
+                被监管部门约谈、通报或者责令限期整改
+                <input class="table-input" type="text" value="+5">
+                分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1">违法违规</li>
+            <li class="w-2">不予行政处罚的违法违规行为</li>
+            <li class="w-3">
+                责令改正等行政告诫
+                <input class="table-input" type="text" value="+1">
+                分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">发布违法广告</li>
+            <li class="w-3">
+                <input class="table-input" type="text" value="+5">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">产品被责令暂停销售</li>
+            <li class="w-3">
+                <input class="table-input" type="text" value="+5">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">互联网信息服务或者交易中违法</li>
+            <li class="w-3">
+                <input class="table-input" type="text" value="+5">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">行政处罚</li>
+            <li class="w-3">
+                简易程序处罚
+                <input class="table-input" type="text" value="+5">分
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                一般程序单处警告惩罚
+                <input class="table-input" type="text" value="+5">分
+                <br>
+                公民处1千元以下，法人和其他组织处10万元以下
+                <input class="table-input" type="text" value="+5">分
+                <br>
+                公民处1千元以上一万元以下，法人和其他组织10 万元以上30 万元以下
+                <input class="table-input" type="text" value="+10">分
+                <br>
+                公民处10 万元以上，对法人和其他组织处100 万元以上
+                <input class="table-input" type="text" value="+20">分
+                <br>
+                责令停产停业
+                <input class="table-input" type="text" value="+30">分
+                <br>
+                禁止许可申请、禁止从业、撤销或者吊销许可证及批准证明文件
+                <input class="table-input" type="text" value="+50">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">造成食品药品安全事故</li>
+            <li class="w-3">
+                造成一般食品药品安全事故
+                <input class="table-input" type="text" value="+10">分
+                <br>
+                造成较大食品药品安全事故
+                <input class="table-input" type="text" value="+20">分
+                <br>
+                造成重大食品药品安全事故
+                <input class="table-input" type="text" value="+30">分
+                <br>
+                造成特别重大食品药品安全事故
+                <input class="table-input" type="text" value="+20">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">拒绝执法</li>
+            <li class="w-3">
+                拒绝、阻挠执法
+                <input class="table-input" type="text" value="+30">分
+                <br>
+                暴力抗法
+                <input class="table-input" type="text" value="+50">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+        <ul class="u-tr">
+            <li class="w-1"></li>
+            <li class="w-2">行事处罚</li>
+            <li class="w-3">
+                因食品药品违法犯罪受到刑事处罚
+                <input class="table-input" type="text" value="+50">分
+            </li>
+            <li class="w-4">
+                <input class="table-input" type="text" value="12">个月
+            </li>
+        </ul>
+    </div>
+    <div class="button-toolbar clear">
+        <span class="button-border-box ">
+            <input type="button" value="保存方案">
+        </span>
+    </div>
+</section>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,178 @@
+
+
+
+<!doctype html>
+<html id="newTheme">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="fullViewAnalyze.html">
+            <div>
+                <img src="images/quanJingFenXi_03.png" alt="">
+            </div>
+            <span>全景分析</span>
+        </a>
+    </li>
+    <li>
+        <a href="tradeConsensus.html">
+            <div>
+                <img src="images/quanJingFenXi_10.png" alt="">
+            </div>
+            <span>行业舆情</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusTrends.html">
+            <div>
+                <img src="images/quanJingFenXi_16.png" alt="">
+            </div>
+            <span>舆情动态</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusReport.html">
+            <div>
+                <img src="images/quanJingFenXi_21.png" alt="">
+            </div>
+            <span>舆情报告</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="main-content">
+        <h3>新建主题</h3>
+        <div class="section-content">
+            <ul>
+                <li>
+                    <div class="mb20">
+                        
+<label class="bigLabel">设置检测主题</label>
+
+                        
+<span class="tip">设置检测主题</span>
+
+                    </div>
+                    <div>
+                        
+<label class="smallLabel">设置主题名称</label>
+
+                        
+<input class="input-text" type="text" >
+
+                    </div>
+                </li>
+                <li>
+                    <div class="mb20">
+                        
+<label class="bigLabel">设置检测关键词</label>
+
+                        
+<span class="tip">每个主题最多可设置10个关键词，每组关键词字数建议10个字以内</span>
+
+                    </div>
+                    <div>
+                        
+<input class="input-text" type="text" >
+
+                        
+<a id="add1" href="javascript:;" class="addBtn">添加关键词</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="mb20">
+                        
+<label class="bigLabel">设置修饰词</label>
+
+                        
+<span class="tip">修饰检测关键词，如：间歇抢劫，江西独步修饰词为&quot;江西&quot;检测关键词为&quot;抢劫&quot;和&quot;赌博&quot;两个词中间可以出现任意多个字符</span>
+
+                    </div>
+                    <div>
+                        
+<input class="input-text" type="text" >
+
+                        
+<a id="add2" href="javascript:;" class="addBtn">添加修饰词</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="mb20">
+                        
+<label class="bigLabel">设置排除词</label>
+
+                        
+<span class="tip">每个主题最多可设置5组关键词，每组排除词字数建议10个字之内</span>
+
+                    </div>
+                    <div>
+                        
+<input class="input-text" type="text" >
+
+                        
+<a id="add3" href="javascript:;" class="addBtn">添加排除词</a>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+<span class="button-border-box">
+    <input id="save" type="button" value="完成">
+</span>
+
+    <a id="cancelBtn" href="themeManage.html">取消</a>
+</section>
+<script>
+    $("#save").click(function () {
+        location.href = "themeManage.html";
+    })
+</script>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

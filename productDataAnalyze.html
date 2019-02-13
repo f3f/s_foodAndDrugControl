@@ -1,0 +1,274 @@
+
+
+
+<!doctype html>
+<html id="productDataAnalyze">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="fullViewAnalyze.html">
+            <div>
+                <img src="images/quanJingFenXi_03.png" alt="">
+            </div>
+            <span>全景分析</span>
+        </a>
+    </li>
+    <li>
+        <a href="tradeConsensus.html">
+            <div>
+                <img src="images/quanJingFenXi_10.png" alt="">
+            </div>
+            <span>行业舆情</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusTrends.html">
+            <div>
+                <img src="images/quanJingFenXi_16.png" alt="">
+            </div>
+            <span>舆情动态</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusReport.html">
+            <div>
+                <img src="images/quanJingFenXi_21.png" alt="">
+            </div>
+            <span>舆情报告</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap clear">
+    <div class="title clear">
+        <h2>药品行业数据分析</h2>
+        <div class="back">
+            <img src="images/icon-back.png" >
+        </div>
+    </div>
+    <div class="first">
+        <h3>药品行业事件聚类图</h3>
+        <div class="main-content clear">
+            <div class="left">
+                <div id="drugIndustryEvent" style="margin:0 auto;padding-top:10px;"></div>  <!--聚类图-->
+                <!--<img src="images/yaoPinHangYeShuJuFenXi_03.png" alt="" style="width: 100%;">-->
+                <!--河流图<iframe  frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" style="width: 100%; height:300px;" src="iframe/productDataAnalyze-iframe.html"></iframe>-->
+                <div id="date-slider" style="width: 640px; border-radius:20px; margin:0 auto;"></div>  <!--聚类图时间轴-->
+            </div>
+            <div class="right">
+                <div class="content-wrap">
+                    <div class="content-frame">
+                        <div class="c-title">
+                            不安全事件
+                        </div>
+                        <ul>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                            <li>
+                                <span class="date">2013-01-01</span>
+                                <p>事件摘要事件摘要事件摘要事件摘要事件摘要事件摘要</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second clear">
+        <div class="left">
+            <h3>近一年药品舆情走势图</h3>
+            <div class="main-content" id="line" style="height:415px;">
+                <!--<img src="images/yaoPinHangYeShuJuFenXi_07.png" alt="" style="width: 100%;">-->
+            </div>
+        </div>
+        <div class="right">
+            <h3>近一年药品事件分析</h3>
+            <div class="main-content" >
+                <!--<img src="images/yaoPinHangYeShuJuFenXi_09.png" alt="" style="width: 100%;">-->
+                <div id="434" style="height:415px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="three">
+        <h3>药品产业链分析</h3>
+        <div class="main-content clear">
+            <div class="top clear">
+                <div class="vertival-title">
+                    <div class="title-wrap">
+                        <span>产业链</span>
+                    </div>
+                </div>
+                <div class="cyl-section clear">
+                    <div class="circle-bg">
+                        <p>原材料</p>
+                        <p>供应商</p>
+                        <span>500家</span>
+                    </div>
+                </div>
+                <i></i>
+                <div class="cyl-section clear">
+                    <div class="circle-bg">
+                        <p>生产</p>
+                        <p>企业</p>
+                        <span>500家</span>
+                    </div>
+                </div>
+                <i></i>
+                <div class="cyl-section clear">
+                    <div class="circle-bg">
+                        <p>运输</p>
+                        <p>企业</p>
+                        <span>500家</span>
+                    </div>
+                </div>
+                <i></i>
+                <div class="cyl-section clear">
+                    <div class="circle-bg">
+                        <p>销售</p>
+                        <p>企业</p>
+                        <span>500家</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom clear">
+                <div class="vertival-title">
+                    <div class="title-wrap">
+                        <span>事故挖掘</span>
+                    </div>
+                </div>
+                <ul class="clear">
+                    <li>
+                        <div class="sg-title">
+                            预警企业50家
+                        </div>
+                        <i></i>
+                        <div class="sg-content">
+                            <dl>
+                                <dd>【化学物质超标】</dd>
+                                <dd>【化学物质超标】</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sg-title">
+                            预警企业50家
+                        </div>
+                        <i></i>
+                        <div class="sg-content">
+                            <dl>
+                                <dd>【化学物质超标】</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sg-title">
+                            预警企业50家
+                        </div>
+                        <i></i>
+                        <div class="sg-content">
+                            <dl>
+                                <dd>【化学物质超标】</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="last">
+                        <!--<div class="sg-title">-->
+                            <!--预警企业50家-->
+                        <!--</div>-->
+                        <!--<i></i>-->
+                        <div class="sg-content">
+                            <dl>
+                                <dd>【化学物质超标】</dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/charts/jquery-ui.min.js"></script>
+<script src="js/charts/sliderUI.js"></script>
+<script src="js/d3.js"></script>
+<script src="js/charts/echarts-all-3.js"></script>
+<script src="js/charts/echarts-engine.js"></script>
+<script src="js/lib/bubble-cloud1.js"></script>
+<script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+<script src="js/productDataAnalyze.js"></script>
+
+</body>
+</html>
+

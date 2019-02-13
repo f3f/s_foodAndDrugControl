@@ -1,0 +1,359 @@
+
+
+
+<!doctype html>
+<html id="creditEnterpiseIndex">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="js/lib/pagination.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="creditEnterpriseIndex.html">
+            <div>
+                <img src="images/credit-icon-1.png" alt="">
+            </div>
+            <span>信用管理</span>
+        </a>
+    </li>
+    <li>
+        <a href="creditSet.html">
+            <div>
+                <img src="images/credit-icon-2.png" alt="">
+            </div>
+            <span>信用设置</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="first">
+        <div class="select">
+            <select class="js-select">
+                <option value="企业名称">企业名称</option>
+                <option value="股东/法人">股东/法人</option>
+            </select>
+        </div>
+        <div class="search">
+            <input class="search-input" type="text" placeholder="请输入关键字">
+            <span class="button-border-box">
+                <input id="title-search" type="button" value="查询">
+            </span>
+        </div>
+
+    </div>
+    <div class="second">
+        <aside class="left">
+            <div class="title">
+                <h2>失信黑名单</h2>
+                <div class="select-group">
+                    <select class="js-select">
+                        <option value="食品">食品</option>
+                        <option value="药品">药品</option>
+                        <option value="保健品">保健品</option>
+                        <option value="化妆品">化妆品</option>
+                        <option value="医疗器械">医疗器械</option>
+                    </select>
+                    <select class="js-select">
+                        <option value="济南">济南</option>
+                        <option value="潍坊">潍坊</option>
+                        <option value="菏泽">菏泽</option>
+                        <option value="临沂">临沂</option>
+                        <option value="潍坊">潍坊</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content">
+                    <div id="blackList">
+                    </div>
+                    <script id="tBlackList" type="text/x-handlebars-template">
+                    <table>
+                        <tr>
+                            <th class="th1"><span></span>企业名称</th>
+                            <th class="th2">行业</th>
+                            <th class="th3">地区</th>
+                            <th class="th4"><span></span>日期</th>
+                        </tr>
+                        {{#each this}}
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">{{enterprise}}</a></td>
+                            <td>{{trade}}</td>
+                            <td>{{region}}</td>
+                            <td>{{data}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    </script>
+                    <div class="pagtion" id="blackPagtion">
+                    </div>
+            </div>
+        </aside>
+        <aside class="right">
+            <div class="title">
+                <h2>诚信红名单</h2>
+                <div class="select-group">
+                    <select class="js-select">
+                        <option value="食品">食品</option>
+                        <option value="药品">药品</option>
+                        <option value="保健品">保健品</option>
+                        <option value="化妆品">化妆品</option>
+                        <option value="医疗器械">医疗器械</option>
+                    </select>
+                    <select class="js-select">
+                        <option value="济南">济南</option>
+                        <option value="潍坊">潍坊</option>
+                        <option value="菏泽">菏泽</option>
+                        <option value="临沂">临沂</option>
+                        <option value="潍坊">潍坊</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th class="th1"><span></span>企业名称</th>
+                        <th class="th2">行业</th>
+                        <th class="th3">地区</th>
+                        <th class="th4"><span></span>日期</th>
+                    </tr>
+                    <tr>
+                        <td><a href="creditEnterpriseInfo.html">山东秦老太食品有限公司</a></td>
+                        <td>食品</td>
+                        <td>济南</td>
+                        <td>2016-01-02</td>
+                    </tr>
+                    <tr>
+                        <td><a href="creditEnterpriseInfo.html">山东秦老太食品有限公司</a></td>
+                        <td>食品</td>
+                        <td>济南</td>
+                        <td>2016-01-02</td>
+                    </tr>
+                    <tr>
+                        <td><a href="creditEnterpriseInfo.html">山东秦老太食品有限公司</a></td>
+                        <td>食品</td>
+                        <td>济南</td>
+                        <td>2016-01-02</td>
+                    </tr>
+                    <tr>
+                        <td><a href="creditEnterpriseInfo.html">山东秦老太食品有限公司</a></td>
+                        <td>食品</td>
+                        <td>济南</td>
+                        <td>2016-01-02</td>
+                    </tr>
+                    <tr>
+                        <td><a href="creditEnterpriseInfo.html">山东秦老太食品有限公司</a></td>
+                        <td>食品</td>
+                        <td>济南</td>
+                        <td>2016-01-02</td>
+                    </tr>
+                    <tr>
+                        <td><a href="creditEnterpriseInfo.html">山东秦老太食品有限公司</a></td>
+                        <td>食品</td>
+                        <td>济南</td>
+                        <td>2016-01-02</td>
+                    </tr>
+                </table>
+                <div class="pagtion">
+                    <span><</span>
+                    <a href="javascript:;" class="active">1</a>
+                    <a href="javascript:;">2</a>
+                    <a href="javascript:;">3</a>
+                    <a href="javascript:;">4</a>
+                    <a href="javascript:;">5</a>
+                    <a href="javascript:;">6</a>
+                    <a href="javascript:;">7</a>
+                    <a href="javascript:;">8</a>
+                    <a href="javascript:;">9</a>
+                    <span>></span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="three">
+        <div class="inside">
+            <div class="section-title">
+                历史信用等级情况
+            </div>
+            <div class="main-content">
+                <div id="line" style="float:left;width:60%;height:417px;"></div>
+                <div id="pie" style="float:left;width:40%;height:417px;"></div>
+                <!--<img src="images/信用管理01_03.png" alt="" style="width: 100%;">-->
+            </div>
+        </div>
+
+    </div>
+    <div class="four">
+        <div class="inside">
+            <div class="section-title">
+                信用降级企业名单
+            </div>
+            <div class="main-content">
+                <div class="left">
+                    <table>
+                        <tr>
+                            <th class="th1"><span></span>企业名称</th>
+                            <th class="th2"></th>
+                            <th class="th3">现处等级</th>
+                            <th class="th4"><span></span>上次等级</th>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="right">
+                    <table>
+                        <tr>
+                            <th class="th1"><span></span>企业名称</th>
+                            <th class="th2"></th>
+                            <th class="th3">现处等级</th>
+                            <th class="th4"><span></span>上次等级</th>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><a href="creditEnterpriseInfo.html">北京味多美食品有限公司</a></td>
+                            <td></td>
+                            <td><span id="Cgrade" style="color:red">C</span></td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="pagtion">
+                        <span><</span>
+                        <a href="javascript:;" class="active">1</a>
+                        <a href="javascript:;">2</a>
+                        <a href="javascript:;">3</a>
+                        <a href="javascript:;">4</a>
+                        <a href="javascript:;">5</a>
+                        <a href="javascript:;">6</a>
+                        <a href="javascript:;">7</a>
+                        <a href="javascript:;">8</a>
+                        <a href="javascript:;">9</a>
+                        <span>></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="five">
+        <div class="inside">
+            <div class="section-title">
+                集团信用预警
+            </div>
+            <div class="main-content">
+                <div id="tags" style="height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/d3.js"></script>
+<script src="js/charts/echarts-all-3.js"></script>
+<script src="js/charts/echarts-engine.js"></script>
+<script src="js/charts/bubble-cloud.js"></script>
+
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+<script src="js/creditEnterpriseIndex.js"></script>
+</body>
+</html>
+

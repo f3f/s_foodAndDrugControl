@@ -1,0 +1,268 @@
+
+
+
+<!doctype html>
+<html id="fullViewAnalyze">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="fullViewAnalyze.html">
+            <div>
+                <img src="images/quanJingFenXi_03.png" alt="">
+            </div>
+            <span>全景分析</span>
+        </a>
+    </li>
+    <li>
+        <a href="tradeConsensus.html">
+            <div>
+                <img src="images/quanJingFenXi_10.png" alt="">
+            </div>
+            <span>行业舆情</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusTrends.html">
+            <div>
+                <img src="images/quanJingFenXi_16.png" alt="">
+            </div>
+            <span>舆情动态</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusReport.html">
+            <div>
+                <img src="images/quanJingFenXi_21.png" alt="">
+            </div>
+            <span>舆情报告</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <aside class="left">
+        <section class="top clear">
+            <div class="clear">
+                <div class="section-left">
+                    <div class="title-info">
+                        <h1>全景分析</h1>
+                        <p>更新时间：<span class="date">2016-07-16</span></p>
+                    </div>
+                </div>
+                <div class="section-right">
+                    <ul class="clear">
+                        <li class="active">全部</li>
+                        <li>食品</li>
+                        <li>药品</li>
+                        <li>餐饮</li>
+                        <li>化妆品</li>
+                        <li>保健品</li>
+                        <li>医疗器械</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="data">
+                <p class="d-title">今日累监测事件数</p>
+                <p class="num mb">156,285,084</p>
+                <p class="d-title">今日累计预警</p>
+                <p class="num mb">28</p>
+                <!--<divc class="mark">-->
+                    <!--<a href="#">订阅></a>-->
+                <!--</divc>-->
+            </div>
+            <div  id="map" class="fullmap">
+                <!--<img src="images/quanJingFenXi_12.png" alt="">-->
+            </div>
+            <!--<div class="line-data clear">-->
+                <!--<ul class="clear">-->
+                    <!--<li><</li>-->
+                    <!--<li class="active"><span>2014</span><i></i></li>-->
+                    <!--<li><span>2015</span><i></i></li>-->
+                    <!--<li><span>2016</span><i></i></li>-->
+                    <!--<li><span>2017</span><i></i></li>-->
+                    <!--<li>></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </section>
+        <div class="bottom">
+            <section class="bottom-left">
+                <div class="title">
+                    <div class="section-title">
+                        重点产品舆情
+                        <!--<div class="title-right">-->
+                        <!--<img class="lhdialog_open" dialog-title="问题产品走势" src="images/icon-section-title-right.png" dialog-url="components/dialog/dialog-1.html">-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div id="bar" >
+                    <!--<img src="images/quanJingFenXi_26.png" alt="">-->
+                </div>
+            </section>
+            <section class="bottom-right">
+                <div class="title">
+                    <div class="section-title">
+                        重点预警企业
+                    </div>
+                </div>
+                <div style="width: 335px;margin: 0 auto;">
+                    <div id="br2" class="main-content">
+                        <ul>
+                            <li class="clear">
+                                <div class="m-left">
+                                    <span class="l-1">10%</span>
+                                    <span class="l-2">不合格率</span>
+                                </div>
+                                <div class="m-center">
+                                    <i class="i-left"></i>
+                                    <span>三元食品有限公司</span>
+                                    <i class="i-right"></i>
+                                </div>
+                                <div class="m-right">
+                                    <span class="r-1">10%</span>
+                                    <span class="r-2">投诉率</span>
+                                </div>
+                            </li>
+                            <li class="clear">
+                                <div class="m-left">
+                                    <span class="l-1">10%</span>
+                                    <span class="l-2">不合格率</span>
+                                </div>
+                                <div class="m-center">
+                                    <i class="i-left"></i>
+                                    <span>三元食品有限公司</span>
+                                    <i class="i-right"></i>
+                                </div>
+                                <div class="m-right">
+                                    <span class="r-1">10%</span>
+                                    <span class="r-2">投诉率</span>
+                                </div>
+                            </li>
+                            <li class="clear">
+                                <div class="m-left">
+                                    <span class="l-1">10%</span>
+                                    <span class="l-2">不合格率</span>
+                                </div>
+                                <div class="m-center">
+                                    <i class="i-left"></i>
+                                    <span>三元食品有限公司</span>
+                                    <i class="i-right"></i>
+                                </div>
+                                <div class="m-right">
+                                    <span class="r-1">10%</span>
+                                    <span class="r-2">投诉率</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </aside>
+    <aside class="right">
+        <section class="first">
+            <div class="title">
+                <div class="section-title">
+                    近期监测事件数量走势图
+                </div>
+            </div>
+            <div class="content">
+                <div  id="line1" >
+                </div>
+            </div>
+        </section>
+        <section class="second">
+            <div class="title">
+                <div class="section-title">
+                    预警事件数量走势图
+                    <!--<div class="title-right">-->
+                    <!--<img class="lhdialog_open" dialog-title="食品安全指数走势" src="images/icon-section-title-right.png" dialog-url="components/dialog/dialog-2.html">-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div id="line2" >
+                <img src="images/quanJingFenXi_20.png" alt="">
+            </div>
+        </section>
+        <section class="three">
+            <div class="title">
+                <div class="section-title">
+                    各专业舆情量占比情况
+                    <!--<div class="title-right">-->
+                    <!--<img class="lhdialog_open" dialog-title="舆情热点" src="images/icon-section-title-right.png" dialog-url="components/dialog/dialog-3.html">-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+            <div  id="pie" >
+                <!--<img src="images/quanJingFenXi_29.png" alt="">-->
+            </div>
+        </section>
+    </aside>
+</section>
+<script src="js/charts/echarts-all-3.js"></script>
+<script src="js/charts/echarts-engine.js"></script>
+<script src="js/charts/china.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(argument) {
+        $("#br2 .m-center").click(function () {
+            location.href = "creditLinkEnterpriseInfo.html";
+        });
+         charts.init({ id: 357, container: $("#map")});
+          var bar = charts.init({ id: 351, container: $("#bar")});
+          charts.init({ id: 398, container: $("#line1")});
+          charts.init({ id: 399, container: $("#line2")});
+          charts.init({ id: 362, container: $("#pie")});
+        bar.on("click",function () {
+            console.log(arguments)
+            location.href="consensusAnalyze.html"
+        })
+    });
+</script>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

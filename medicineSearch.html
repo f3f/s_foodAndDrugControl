@@ -1,0 +1,461 @@
+
+
+
+<!doctype html>
+<html id="medicineSearch">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="medicineIndex.html">
+            <div>
+                <img src="images/icon-navleft2.png" alt="">
+            </div>
+            <span>药品预警</span>
+        </a>
+    </li>
+    <li>
+        <a href="medicineTraceability.html">
+            <div>
+                <img src="images/icon-navleft1.png" alt="">
+            </div>
+            <span>药品溯源</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="top">
+        <div class="search-toolbar">
+            <ul>
+                <li>
+                    <label>产品名称</label>
+                    <input id="product" type="text">
+                </li>
+                <li class="second-input">
+                    <label>批次号</label>
+                    <input id="number" type="text">
+                    <span class="button-border-box">
+                        <input id="search" type="button" value="查询">
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="checkbox-group">
+            <label class="categroy">分类</label>
+            <ul>
+                <li>
+                    <input id="no1" type="checkbox" class="hidden-box">
+                    <label for="no1" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">抗生素</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no2" type="checkbox" class="hidden-box">
+                    <label for="no2" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">消化系统用药</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no3" type="checkbox" class="hidden-box">
+                    <label for="no3" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">激素类用药</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no4" type="checkbox" class="hidden-box">
+                    <label for="no4" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">五官科药品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no5" type="checkbox" class="hidden-box">
+                    <label for="no5" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">注射剂类药品</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no6" type="checkbox" class="hidden-box">
+                    <label for="no6" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">皮肤科用药</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no7" type="checkbox" class="hidden-box">
+                    <label for="no7" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">呼吸系统用药</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no8" type="checkbox" class="hidden-box">
+                    <label for="no8" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">心脑血管用药</span>
+                    </label>
+                </li>
+                <li>
+                    <input id="no9" type="checkbox" class="hidden-box">
+                    <label for="no9" class="check-label">
+                        <span class="check-label-box"></span>
+                        <span class="check-label-text">抗肿瘤用药</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="content">
+            <div class="list">
+                <ul>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/20160114214844.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>小儿七星茶颗粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：颗粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/aiDiSha.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>艾迪莎 美沙拉秦缓释颗粒 </p>
+                                <p>产品编号：384630</p>
+                                <p>规格：10袋</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/shiDiShui.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>慧宝源 十滴水 5ml 10支</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：10支</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/xiaoShiPian.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>江中 健胃消食片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/changYanNing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>康恩贝 肠炎宁片 36片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：36片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/longHu.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>龙虎 龙虎人丹60粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：60粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/maMiAi.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>妈咪爱 枯草杆菌二联活菌颗粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：颗粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/maDingLing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>吗丁啉 多潘立酮片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：30片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/20160114214844.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>小儿七星茶颗粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：颗粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/aiDiSha.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>艾迪莎 美沙拉秦缓释颗粒 </p>
+                                <p>产品编号：384630</p>
+                                <p>规格：10袋</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/shiDiShui.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>慧宝源 十滴水 5ml 10支</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：10支</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/xiaoShiPian.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>江中 健胃消食片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/changYanNing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>康恩贝 肠炎宁片 36片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：36片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/longHu.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>龙虎 龙虎人丹60粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：60粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/maMiAi.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>妈咪爱 枯草杆菌二联活菌颗粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：颗粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/maDingLing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>吗丁啉 多潘立酮片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：30片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/20160114214844.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>小儿七星茶颗粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：颗粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/aiDiSha.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>艾迪莎 美沙拉秦缓释颗粒 </p>
+                                <p>产品编号：384630</p>
+                                <p>规格：10袋</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/shiDiShui.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>慧宝源 十滴水 5ml 10支</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：10支</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/xiaoShiPian.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>江中 健胃消食片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/changYanNing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>康恩贝 肠炎宁片 36片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：36片</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/longHu.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>龙虎 龙虎人丹60粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：60粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/maMiAi.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>妈咪爱 枯草杆菌二联活菌颗粒</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：颗粒</p>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="medicineTraceability_Detail.html">
+                        <li>
+                            <div class="img-box">
+                                <img src="images/maDingLing.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p>吗丁啉 多潘立酮片</p>
+                                <p>产品编号：384630</p>
+                                <p>规格：30片</p>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="pagtion">
+                <span><</span>
+                <a href="javascript:;" class="active">1</a>
+                <a href="javascript:;">2</a>
+                <a href="javascript:;">3</a>
+                <a href="javascript:;">4</a>
+                <a href="javascript:;">5</a>
+                <a href="javascript:;">6</a>
+                <a href="javascript:;">7</a>
+                <a href="javascript:;">8</a>
+                <a href="javascript:;">9</a>
+                <span>></span>
+            </div>
+        </div>
+    </div>
+</section>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

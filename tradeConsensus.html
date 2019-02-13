@@ -1,0 +1,193 @@
+
+
+
+<!doctype html>
+<html id="tradeConsensus">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="js/lib/pagination.js"></script>
+
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="fullViewAnalyze.html">
+            <div>
+                <img src="images/quanJingFenXi_03.png" alt="">
+            </div>
+            <span>全景分析</span>
+        </a>
+    </li>
+    <li>
+        <a href="tradeConsensus.html">
+            <div>
+                <img src="images/quanJingFenXi_10.png" alt="">
+            </div>
+            <span>行业舆情</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusTrends.html">
+            <div>
+                <img src="images/quanJingFenXi_16.png" alt="">
+            </div>
+            <span>舆情动态</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusReport.html">
+            <div>
+                <img src="images/quanJingFenXi_21.png" alt="">
+            </div>
+            <span>舆情报告</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="top">
+        <h3>行业舆情监测</h3>
+        <div class="main-content clear">
+            <div class="left" id="bubbleMatrixRuler-chart" style="height:420px;">
+                <!--<img src="images/hangYeYuQingJianCe_03_03.png" alt="" style="width: 100%">-->
+            </div>
+            <div class="right">
+                <div class="u-table clear">
+                </div>
+                <script id="tMonitor" type="text/x-handlebars-template">
+                    <ul class="u-th clear">
+                        <!--<li class="w-1">全部</li>-->
+                        <li class="w-1" style="margin-left: 5%">
+                            <select class="js-select">
+                                <option value="食品">食品</option>
+                                <option value="药品">药品</option>
+                                <option value="保健品">保健品</option>
+                                <option value="化妆品">化妆品</option>
+                                <option value="医疗器械">医疗器械</option>
+                            </select>
+                        </li>
+                        <li class="w-2" style="width: 22%;">产品</li>
+                        <li class="w-3" style="width: 35%;">企业</li>
+                        <li class="w-4" style="width: 23%;">舆情量</li>
+                    </ul>
+                    {{#each this}}
+                    <ul class="u-tr">
+                        <li class="w-1" style="margin-left: 5%">{{type}}</li>
+                        <li class="w-2" style="width: 22%;">{{product}}</li>
+                        <li class="w-3" style="width: 35%;">{{enterprise}}</li>
+                        <li class="w-4" style="width: 23%;">{{number}}</li>
+                    </ul>
+                    {{/each}}
+                </script>
+                <div class="pagtion">
+                    <!--suppress ALL
+                    <span><</span>
+                    <a href="javascript:;" class="active">1</a>
+                    <a href="javascript:;">2</a>
+                    <span>></span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom clear">
+        <div class="left">
+            <h3>食品行业预警排行</h3>
+            <div class="main-content" id="bar" style="height:460px;">
+                <!--<img src="images/hangYeYuQingJianCe_03.png" alt="" style="width: 100%">-->
+            </div>
+        </div>
+        <div class="right">
+            <h3>食品各地区舆情情况</h3>
+            <div class="main-content" id="map" style="height:457px;">
+                <!--<img src="images/hangYeYuQingJianCe_05.png" alt="" style="width: 100%">-->
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/charts/echarts-all-3.js"></script>
+<script src="js/charts/echarts-engine.js"></script>
+<script src="js/charts/china.js"></script>
+<script src="js/charts/bubbleChartMatrixRuler.js"></script>
+<script type="text/javascript">
+    var url = "productDataAnalyze.html";
+    bubbleChartMatrixRuler({
+        // 标识
+        id : 'bubbleMatrixRuler-chart',
+        // 标签
+        label : [
+
+            '产业舆情', // 横坐标
+            '质量舆情', // 纵坐标
+            '轻微预警', // 左上
+            '适当预警', // 左下
+            '重点预警', // 右上
+            '加强预警'  // 右下
+
+        ],
+
+        // 数据
+        data : [
+
+            {x : -.50, y :  .40, r : 1.30, color : 'rgba(198,90,36,.5)',   url : url, name : '食品'},
+            {x : -.25, y :  .50, r : 0.50, color : 'rgba(210,166,15,.5)',  url : url, name : '药品'},
+            {x : -.25, y : -.05, r : 1.10, color : 'rgba(193,54,153,.5)',  url : url, name : '化妆品'},
+            {x : -.01, y :  .60, r : 1.00, color : 'rgba(0,134,162,.5)',   url : url, name : '医疗器械'},
+            {x :  .10, y : -.20, r : 0.90, color : 'rgba(117,126,211,.5)', url : url, name : '餐饮'},
+            {x :  .50, y :  .55, r : 1.00, color : 'rgba(159,70,234,.5)',  url : url, name : '保健品'}
+
+        ],
+
+        // 点击事件
+        handlerClick : function (/* data */ d) {
+
+            console.log(d.url);
+            location.href = d.url;
+
+        }
+
+    });
+</script>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+<script src="js/tradeConsensus.js"></script>
+</body>
+</html>
+

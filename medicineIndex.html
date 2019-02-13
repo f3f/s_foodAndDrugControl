@@ -1,0 +1,658 @@
+
+
+
+<!doctype html>
+<html id="index">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+<script src="js/My97DatePicker/WdatePicker.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script> 
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="medicineIndex.html">
+            <div>
+                <img src="images/icon-navleft2.png" alt="">
+            </div>
+            <span>药品预警</span>
+        </a>
+    </li>
+    <li>
+        <a href="medicineTraceability.html">
+            <div>
+                <img src="images/icon-navleft1.png" alt="">
+            </div>
+            <span>药品溯源</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <aside class="left">
+        <section class="top">
+            <div class="title">
+                <div class="section-title" style="position: relative;">
+                    药品安全预警
+                    <div class="title-right">
+                        <select class="js-select">
+                            <option value="抽查抽检">抽查抽检</option>
+                            <option value="不良反应">不良反应</option>
+                            <option value="投诉举报">投诉举报</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="date-c">
+                    <span>时间：</span>
+                    <input type="text" value="2014-01-01" onClick="WdatePicker()">
+                    <span class="mlr5">至</span>
+                    <input type="text" value="2016-01-01" onClick="WdatePicker()">
+                </div>
+                <div class="select-date">
+                    <ul>
+                        <li>最近一天</li>
+                        <li>近一周</li>
+                        <li>近一月</li>
+                    </ul>
+                </div>
+                <div class="map" id="map">
+                </div>
+                <div class="select-categroy">
+                    <div class="button-group-wrap ">
+                        <div class="button-group-content">
+                            <ul>
+                                <li>抗生素</li>
+                                <li>心脑血管用药</li>
+                                <li>消化系统用药</li>
+                                <li>呼吸系统用药</li>
+                                <li>泌尿系统用药</li>
+                                <li>抗生素</li>
+                                <li>心脑血管用药</li>
+                                <li>消化系统用药</li>
+                                <li>呼吸系统用药</li>
+                                <li>泌尿系统用药</li>
+                                <li>抗生素</li>
+                                <li>心脑血管用药</li>
+                                <li>消化系统用药</li>
+                                <li>呼吸系统用药</li>
+                                <li>泌尿系统用药</li>
+                                <li>抗生素</li>
+                                <li>心脑血管用药</li>
+                                <li>消化系统用药</li>
+                                <li>呼吸系统用药</li>
+                                <li>泌尿系统用药</li>
+                                <li>抗生素</li>
+                                <li>心脑血管用药</li>
+                                <li>消化系统用药</li>
+                                <li>呼吸系统用药</li>
+                                <li>泌尿系统用药</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <input id="viewMore" type="button" class="viewMore" value="查看更多">
+                </div>
+            </div>
+        </section>
+        <div class="bottom">
+            <section class="bottom-left">
+                <div class="title">
+                    <div class="section-title">
+                        问题产品走势
+                        <div class="title-right">
+                            <img class="lhdialog_open" dialog-title="问题产品走势" src="images/icon-section-title-right.png"
+                                 dialog-url="components/dialog/dialog-1.html" chartId="339">
+                        </div>
+                    </div>
+                </div>
+                <div id="line">
+                </div>
+            </section>
+            <section class="bottom-right">
+                <div class="title">
+                    <div class="section-title">
+                        不良反应排名及药品类型占比
+                        <div class="title-right">
+                            <img class="lhdialog_open" dialog-title="不良反应排名及药品类型占比"  src="images/icon-section-title-right.png"
+                                 dialog-url="components/dialog/dialog-4.html" chartId="487">
+                        </div>
+                    </div>
+                </div>
+                <div id="bar1">
+                </div>
+            </section>
+        </div>
+
+    </aside>
+    <aside class="right">
+        <section class="first">
+            <div class="title">
+                <div class="section-title">
+                    预警企业名单
+                </div>
+            </div>
+            <div class="content">
+                <div class="radio-group">
+                    <ul>
+                        <!--<li>-->
+                        <!--<input id="first" type="radio" name="radio" checked value="无证经营"/>-->
+                        <!--<label for="first" class="circle">-->
+                        <!--<span>无证经营</span>-->
+                        <!--</label>-->
+
+                        <!--</li>-->
+                        <li>
+                            <input id="second" type="radio" name="radio" checked value="产品质量"/>
+                            <label for="second" class="circle">
+                                <span>产品质量</span>
+                            </label>
+
+                        </li>
+                        <li>
+                            <input id="three" type="radio" name="radio" value="信用异动"/>
+                            <label for="three" class="circle">
+                                <span>信用异动</span>
+                            </label>
+
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="list-table" data-for="产品质量">
+                    <div class="u-table clear" id="product">
+                    </div>
+                    <script id="tProduct" type="text/x-handlebars-template">
+						<ul class="u-th clear">
+							<li class="w-1">产品名称</li>
+							<li class="w-2">不合格项目</li>
+							<li class="w-3">生产企业</li>
+						</ul>
+					   {{#each this}}
+						   <ul class="u-tr">
+								<li class="w-1"><a href="medicineTraceability_Detail.html" title="{{productName}}">{{productName}}</a></li>
+								<li class="w-2">{{unqualifiedItem}}</li>
+								<li class="w-3">{{enterprise}}</li>
+							</ul>
+						{{/each}}
+					</script>
+                </div>
+                <div class="list-table second-table" data-for="信用异动" style="display: none;">
+                    <div class="u-table clear" id="credit">
+                    </div>
+                    <script id="tCredit" type="text/x-handlebars-template">
+                        <ul class="u-th clear">
+                            <li class="w-1">企业名称</li>
+                            <li class="w-2">现处等级</li>
+                        </ul>
+                       {{#each this}}
+                         <ul class="u-tr">
+                            <li class="w-1"><a href="creditEnterpriseInfo.html" title="{{enterpriseName}}">{{enterpriseName}}</a></li>
+                            <li class="w-2">{{grade}}</li>
+                          </ul>
+                        {{/each}} 
+                    </script>
+                </div>
+            </div>
+        </section>
+        <section class="second">
+            <div class="title">
+                <div class="section-title">
+                    药品安全指数走势
+                    <div class="title-right">
+                        <img class="lhdialog_open" dialog-title="药品安全指数走势" src="images/icon-section-title-right.png"
+                             dialog-url="components/dialog/dialog-2.html" chartId="345">
+                    </div>
+                </div>
+            </div>
+            <!--div id="bar2-calendar">
+                <input type="text" value="2016" onClick="WdatePicker({skin:'blue',dateFmt:'yyyy年'})"/>
+            </div-->
+            <div id="bar2">
+            </div>
+        </section>
+        <section class="three">
+            <div class="title">
+                <div class="section-title">
+                    舆情热点
+                    <div class="title-right">
+                        <img class="lhdialog_open1" dialog-title="舆情热点" src="images/icon-section-title-right.png"
+                             dialog-url="components/dialog/dialog-3.html" chartId="488">
+                    </div>
+                </div>
+            </div>
+            <!--<div id="bar3" style="height: 160px;width: 100%;">-->
+            <!--</div>-->
+            <div id="bar3" style="width: 50%;">
+            </div>
+            <div id="bar3-1" style="width: 50%;">
+            </div>
+        </section>
+    </aside>
+
+    <section id="index-dialog1" style="display: none;">
+        <div class="first clear">
+            <!--<label>不良反应类型</label>-->
+            <div class="select">
+                <select class="js-select-view">
+                    <option value="不良反应类型">不良反应类型</option>
+                    <option value="全部">全部</option>
+                    <option value="A类">A类</option>
+                    <option value="B类">B类</option>
+                    <option value="C类">C类</option>
+                </select>
+            </div>
+            <div class="search clear">
+                <input class="search-input" type="text" placeholder="请输入药品名称">
+                <span class="button-border-box">
+                <input id="title-search" type="button" value="搜索">
+            </span>
+            </div>
+        </div>
+        <div class="list clear">
+            <div class="u-table clear">
+                <ul class="u-th clear">
+                    <li class="w-1">序号</li>
+                    <li class="w-2">药品名称</li>
+                    <li class="w-3">药品生产企业</li>
+                    <li class="w-4">上报单位</li>
+                    <li class="w-5">不良反应类型</li>
+                </ul>
+                <ul class="u-tr">
+                    <li class="w-1">1</li>
+                    <li class="w-2">牛黄上清丸</li>
+                    <li class="w-3">白山健宁药业有限公司</li>
+                    <li class="w-4">白山医院</li>
+                    <li class="w-5">A类</li>
+                </ul>
+                <ul class="u-tr">
+                    <li class="w-1">1</li>
+                    <li class="w-2">牛黄上清丸</li>
+                    <li class="w-3">白山健宁药业有限公司</li>
+                    <li class="w-4">白山医院</li>
+                    <li class="w-5">A类</li>
+                </ul>
+                <ul class="u-tr">
+                    <li class="w-1">1</li>
+                    <li class="w-2">牛黄上清丸</li>
+                    <li class="w-3">白山健宁药业有限公司</li>
+                    <li class="w-4">白山医院</li>
+                    <li class="w-5">A类</li>
+                </ul>
+                <ul class="u-tr">
+                    <li class="w-1">1</li>
+                    <li class="w-2">牛黄上清丸</li>
+                    <li class="w-3">白山健宁药业有限公司</li>
+                    <li class="w-4">白山医院</li>
+                    <li class="w-5">A类</li>
+                </ul>
+                <ul class="u-tr">
+                    <li class="w-1">1</li>
+                    <li class="w-2">牛黄上清丸</li>
+                    <li class="w-3">白山健宁药业有限公司</li>
+                    <li class="w-4">白山医院</li>
+                    <li class="w-5">A类</li>
+                </ul>
+                <ul class="u-tr">
+                    <li class="w-1">1</li>
+                    <li class="w-2">牛黄上清丸</li>
+                    <li class="w-3">白山健宁药业有限公司</li>
+                    <li class="w-4">白山医院</li>
+                    <li class="w-5">A类</li>
+                </ul>
+
+            </div>
+            <div class="pagtion">
+                
+<!--suppress ALL -->
+<span><</span>
+<a href="javascript:;" class="active">1</a>
+<a href="javascript:;">2</a>
+<a href="javascript:;">3</a>
+<a href="javascript:;">4</a>
+<a href="javascript:;">5</a>
+<a href="javascript:;">6</a>
+<a href="javascript:;">7</a>
+<a href="javascript:;">8</a>
+<a href="javascript:;">9</a>
+<span>></span>
+
+            </div>
+        </div>
+    </section>
+    <div class="m-index-dialog clear">
+        <div class="dialog-top clear">
+            <h3>销售企业</h3>
+            <div class="db-wrap">
+                <ul>
+                    <li>
+                        <label>企&nbsp;&nbsp;业&nbsp;&nbsp;名&nbsp;&nbsp;称：</label>
+                        <span>山东省伊利生产集团</span>
+                    </li>
+                    <li>
+                        <label>企&nbsp;&nbsp;业&nbsp;&nbsp;地&nbsp;&nbsp;址：</label>
+                        <span>山东省济宁市XX区XX工业园区</span>
+                    </li>
+                    <li>
+                        <label>企&nbsp;&nbsp;业&nbsp;&nbsp;法&nbsp;&nbsp;人：</label>
+                        <span>赵XX</span>
+                    </li>
+                    <li>
+                        <label>企业信用等级：</label>
+                        <span>B级</span>
+                    </li>
+                    <li>
+                        <label>企业风向综评：</label>
+                        <span>89.3</span>
+                    </li>
+                    <li>
+                        <label>企业失信记录：</label>
+                        <span>5</span>
+                    </li>
+                </ul>
+                <a href="javascript:;">查看更多</a>
+            </div>
+
+        </div>
+        <div class="dialog-bottom clear">
+            <div class="d-left">
+                <h3>伊利QQ星儿童成长牛奶</h3>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <label>起始时间：</label>
+                            <input type="text" value="2016-01-01">
+                        </li>
+                        <li>
+                            <label>企业地址：</label>
+                            <span>山东省济南市XX园区</span>
+                        </li>
+                        <li>
+                            <label>举报次数：</label>
+                            <span>5次</span>
+                        </li>
+                        <li>
+                            <label>举报人数：</label>
+                            <span>5次</span>
+                        </li>
+                        <li>
+                            <label>举报人数：</label>
+                            <span>7次</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-right">
+                <div class="dr-wrap">
+                    <ul>
+                        <li>
+                            <label>举&nbsp;报&nbsp;内&nbsp;容：</label>
+                            <span>XXXX孩子喝了QQ星成长牛奶之后，出现了腹泻</span>
+                        </li>
+                        <li>
+                            <label>被举报单位：</label>
+                            <span>山东省枣庄市沃尔玛武成店</span>
+                        </li>
+                        <li>
+                            <label>举&nbsp;&nbsp;&nbsp;报&nbsp;&nbsp;&nbsp;人：</label>
+                            <span>赵XX</span>
+                        </li>
+                        <li>
+                            <label>举&nbsp;报&nbsp;时&nbsp;间：</label>
+                            <span>2016-7-15</span>
+                        </li>
+                    </ul>
+
+                    <ul style="border: 0;">
+                        <li>
+                            <label>举&nbsp;报&nbsp;内&nbsp;容：</label>
+                            <span>XXXX孩子喝了QQ星成长牛奶之后，出现了腹泻</span>
+                        </li>
+                        <li>
+                            <label>被举报单位：</label>
+                            <span>山东省枣庄市沃尔玛武成店</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--投诉举报详情页-->
+    <div class="m-index-dialog2 clear">
+        <div class="dialog-top clear">
+            <div class="d-left">
+                <h3>分布状态</h3>
+                <div id="map170" class="content" style="width: 388px;height: 200px;">
+
+                </div>
+            </div>
+            <div class="d-right">
+                <h3>销售企业</h3>
+                <ul>
+                    <li>
+                        <label>企业名称：</label>
+                        <span>山东省伊利生产集团</span>
+                    </li>
+                    <li>
+                        <label>企业地址：</label>
+                        <span>山东省济宁市XX工业园区</span>
+                    </li>
+                    <li>
+                        <label>企业法人：</label>
+                        <span>航三</span>
+                    </li>
+                    <li>
+                        <label>企业信用等级：</label>
+                        <span>B级</span>
+                    </li>
+                    <li>
+                        <label>企业风向综评：</label>
+                        <span>89.3</span>
+                    </li>
+                    <li>
+                        <label>企业失信记录：</label>
+                        <span>5</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dialog-bottom clear">
+            <div class="content">
+                <div class="left">
+                    <h3>牛黄上清片</h3>
+                    <div class="db-wrap">
+                        <ul>
+                            <li>
+                                <label>起始时间：</label>
+                                <div class="date-c">
+                                    <input type="text" value="2014-01-01">
+                                </div>
+                            </li>
+                            <li>
+                                <label>企业地址：</label>
+                                <span>山东省济宁市XX区XX工业园区</span>
+                            </li>
+                            <li>
+                                <label>举报次数：</label>
+                                <span>7次</span>
+                            </li>
+                            <li>
+                                <label>举报人数：</label>
+                                <span>5人</span>
+                            </li>
+                            <li>
+                                <label>举报人数：</label>
+                                <span>5人</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="dr-wrap">
+                        <ul class="clear">
+                            <li>
+                                <label>举&nbsp;报&nbsp;内&nbsp;容：</label>
+                                <span>XXXX孩子喝了QQ星成长牛奶之后，出现了腹泻</span>
+                            </li>
+                            <li>
+                                <label>被举报单位：</label>
+                                <span>山东省枣庄市沃尔玛武成店</span>
+                            </li>
+                            <li>
+                                <label>举&nbsp;&nbsp;&nbsp;报&nbsp;&nbsp;&nbsp;人：</label>
+                                <span>赵XX</span>
+                            </li>
+                            <li>
+                                <label>举&nbsp;报&nbsp;时&nbsp;间：</label>
+                                <span>2016-7-15</span>
+                            </li>
+                        </ul>
+
+                        <ul style="border: 0;">
+                            <li>
+                                <label>举&nbsp;报&nbsp;内&nbsp;容：</label>
+                                <span>XXXX孩子喝了QQ星成长牛奶之后，出现了腹泻</span>
+                            </li>
+                            <li>
+                                <label>被举报单位：</label>
+                                <span>山东省枣庄市沃尔玛武成店</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--不良反应详情页-->
+    <div class="m-index-dialog3 clear" style="display: none;">
+        <div class="dialog-top clear">
+            <div class="d-left">
+                <h3>分布状态</h3>
+                <div id="map170" class="content" style="width: 388px;height: 200px;">
+
+                </div>
+            </div>
+            <div class="d-right">
+                <h3>销售企业</h3>
+                <ul>
+                    <li>
+                        <label>企业名称：</label>
+                        <span>山东省伊利生产集团</span>
+                    </li>
+                    <li>
+                        <label>企业地址：</label>
+                        <span>山东省济宁市XX工业园区</span>
+                    </li>
+                    <li>
+                        <label>企业法人：</label>
+                        <span>航三</span>
+                    </li>
+                    <li>
+                        <label>企业信用等级：</label>
+                        <span>B级</span>
+                    </li>
+                    <li>
+                        <label>企业风向综评：</label>
+                        <span>89.3</span>
+                    </li>
+                    <li>
+                        <label>企业失信记录：</label>
+                        <span>5</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dialog-bottom clear">
+            <div class="content">
+                <div class="left left-1">
+                    <h3>不良反应详情</h3>
+                    <div class="db-wrap">
+                        <ul>
+                            <li>
+                                <label>上&nbsp;&nbsp;报&nbsp;&nbsp;单&nbsp;&nbsp;位：</label>
+                                <span>白山医院</span>
+                            </li>
+                            <li>
+                                <label>不良反应产品：</label>
+                                <span>牛黄上清片</span>
+                            </li>
+                            <li>
+                                <label>不良反应病例：</label>
+                                <span>20</span>
+                            </li>
+                            <li>
+                                <label>不良反应类型：</label>
+                                <span>A类（10）B类（5）C类（5）</span>
+                            </li>
+                            <li>
+                                <label>病例后期跟踪：</label>
+                                <span>治愈18人、未愈1人、死亡1人</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="right" id="db-wrap-graph" style="float: right; height: 250px; width: 300px">
+                    <!-- <div >
+                         <img src="images/aShiPinYuJing-DianJiXiangQing.png" alt="">
+                    </div>-->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<script src="js/charts/echarts-all-3.js"></script>
+<script src="js/charts/echarts-engine.js"></script>
+<script src="js/charts/shandong.js"></script>
+<script src="js/webgl/main.js"></script>
+
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+<script src="js/medicineIndex.js"></script>
+</body>
+</html>
+

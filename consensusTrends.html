@@ -1,0 +1,402 @@
+
+
+
+<!doctype html>
+<html id="consensusTrends">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="js/select-4.0.3/css/select2.css">
+<script src="js/select-4.0.3/js/select2.min.js"></script>
+<script src="js/lhgdialog/lhgdialog.js"></script>
+
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <nav class="left-nav">
+
+<ul>
+    <li>
+        <a href="fullViewAnalyze.html">
+            <div>
+                <img src="images/quanJingFenXi_03.png" alt="">
+            </div>
+            <span>全景分析</span>
+        </a>
+    </li>
+    <li>
+        <a href="tradeConsensus.html">
+            <div>
+                <img src="images/quanJingFenXi_10.png" alt="">
+            </div>
+            <span>行业舆情</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusTrends.html">
+            <div>
+                <img src="images/quanJingFenXi_16.png" alt="">
+            </div>
+            <span>舆情动态</span>
+        </a>
+    </li>
+    <li>
+        <a href="consensusReport.html">
+            <div>
+                <img src="images/quanJingFenXi_21.png" alt="">
+            </div>
+            <span>舆情报告</span>
+        </a>
+    </li>
+</ul>
+
+
+</nav>
+    <article class="main">
+<section class="wrap">
+    <div class="first clear">
+        <lable class="title-label">选择主题：</lable>
+        <ul class="tab-group clear">
+            <li class="active">牛奶过期</li>
+            <li>牛奶过期</li>
+            <li>牛奶过期</li>
+            <li>牛奶过期</li>
+        </ul>
+        <div class="button-c">
+            
+<span class="button-border-box">
+    <input id="manage_theme" type="button" value="管理主题">
+</span>
+
+        </div>
+    </div>
+    <div class="second clear">
+        <div class="p">
+            <label class="title-label">输入关键词：</label>
+            <div class="filter-input">
+                <ul>
+                    <li>
+                        <span>包含以下关键词</span>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <span>不包含以下关键词</span>
+                        <input type="text">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="p">
+            <lable class="title-label">媒体类型：</lable>
+            <ul class="tab-group clear">
+                <li class="active">全部</li>
+                <li>新闻</li>
+                <li>微信</li>
+                <li>论坛</li>
+                <li>微博</li>
+            </ul>
+        </div>
+        <div class="p">
+            <lable class="title-label">情感类型：</lable>
+            <ul class="tab-group clear">
+                <li class="active">全部</li>
+                <li>正面</li>
+                <li>中性</li>
+                <li>负面</li>
+            </ul>
+        </div>
+        <div class="p">
+            <lable class="title-label">时间范围：</lable>
+            <div class="radio-c">
+                
+<div class="radio-group">
+    <input id="hour" type="radio" name="radio"  checked="checked" 
+           value="24小时"/>
+    <label for="hour" class="circle">
+        <span>24小时</span>
+    </label>
+</div>
+
+                
+<div class="radio-group">
+    <input id="week" type="radio" name="radio" 
+           value="一周"/>
+    <label for="week" class="circle">
+        <span>一周</span>
+    </label>
+</div>
+
+                
+<div class="radio-group">
+    <input id="month" type="radio" name="radio" 
+           value="一个月"/>
+    <label for="month" class="circle">
+        <span>一个月</span>
+    </label>
+</div>
+
+            </div>
+            <div class="date-c">
+                <span>自定义时间：</span>
+                <input type="text" value="2014-01-01">
+                <i>-</i>
+                <input type="text" value="2016-01-01">
+            </div>
+        </div>
+        <div class="p">
+            <lable class="title-label">文章排序：</lable>
+            <ul class="tab-group clear">
+                <li class="active">相关度</li>
+                <li>浏览数</li>
+                <li>转载量</li>
+                <li>发布时间</li>
+            </ul>
+        </div>
+    </div>
+    <div class="three clear">
+        <div class="checkbox-1 checkbox-group">
+            
+<input id="checkAll" type="checkbox" class="hidden-box" value="all" >
+<label for="checkAll">
+    <span class="check-label-box"></span>
+    <span class="check-label-text">全选</span>
+</label>
+
+        </div>
+        <div class="button-2 checkbox-group">
+            
+<span class="button-border-box">
+    <input id="shoucang" type="button" value="批量收藏">
+</span>
+
+        </div>
+        <div class="button-3 checkbox-group">
+            
+<span class="button-border-box">
+    <input id="view" type="button" value="查看舆情分析">
+</span>
+
+        </div>
+    </div>
+    <div class="four">
+        <ul class="clear">
+            <li class="active clear">
+                <div class="intro clear">
+                    <dl>
+                        <dd class="m-1 checkbox-group">
+                            
+<input id="id1" type="checkbox" class="hidden-box" value="all"  checked="checked" >
+<label for="id1">
+    <span class="check-label-box"></span>
+    <span class="check-label-text">质检总局陈钢:强化协作实现农资产品打假突破</span>
+</label>
+
+                        </dd>
+                        <dd class="m-2">
+                            中性
+                        </dd>
+                        <dd class="m-3">
+                            新华网
+                        </dd>
+                        <dd class="m-4"></dd>
+                        <dd class="m-5">
+                            <span class="date">2016-3-4</span>
+                            <span class="time">11:04:34</span>
+                        </dd>
+                        <dd class="m-6">
+                            <img src="images/icon-star_03.png" alt="">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="main-content">
+                    <div class="zhaiyao">摘要：</div>
+                    <p>“十二五”期间，全国质检系统持续开展农资产品执法打假工作，取得显著成效，为推动现代农业健康持续发展中，发挥了重要作用。一是组织开展“农资打假下乡”行动，二是开展农资打假“质检利剑”行动，三是深入开展区域整治工作，四是开展涉农电商产品打假。同时，我们也要看到当前农资打假工作面临的形势依然严峻，农资打假的工作任务依然艰巨。制售假冒伪劣农资产品违法行为状况仍未从根本上得到扭转，坑农害农。……</p>
+                    <span class="url">链接地址：</span>
+                    <a href="www.baidu.com">http://www.baidu.com</a>
+                </div>
+            </li>
+            <li class="clear">
+                <div class="intro clear">
+                    <dl>
+                        <dd class="m-1 checkbox-group">
+                            
+<input id="id2" type="checkbox" class="hidden-box" value="all" >
+<label for="id2">
+    <span class="check-label-box"></span>
+    <span class="check-label-text">儿童家具成质检重灾区</span>
+</label>
+
+                        </dd>
+                        <dd class="m-2">
+                            正面
+                        </dd>
+                        <dd class="m-3">
+                            新华网
+                        </dd>
+                        <dd class="m-4"></dd>
+                        <dd class="m-5">
+                            <span class="date">2016-3-4</span>
+                            <span class="time">11:04:34</span>
+                        </dd>
+                        <dd class="m-6">
+                            <img src="images/icon-star_03.png" alt="">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="main-content">
+                    <div class="zhaiyao">摘要：</div>
+                    <p>“十二五”期间，全国质检系统持续开展农资产品执法打假工作，取得显著成效，为推动现代农业健康持续发展中，发挥了重要作用。一是组织开展“农资打假下乡”行动，二是开展农资打假“质检利剑”行动，三是深入开展区域整治工作，四是开展涉农电商产品打假。同时，我们也要看到当前农资打假工作面临的形势依然严峻，农资打假的工作任务依然艰巨。制售假冒伪劣农资产品违法行为状况仍未从根本上得到扭转，坑农害农。……</p>
+                    <span class="url">链接地址：</span>
+                    <a href="www.baidu.com">http://www.baidu.com</a>
+                </div>
+            </li>
+            <li class="clear">
+                <div class="intro clear">
+                    <dl>
+                        <dd class="m-1 checkbox-group">
+                            
+<input id="id3" type="checkbox" class="hidden-box" value="all" >
+<label for="id3">
+    <span class="check-label-box"></span>
+    <span class="check-label-text">儿童家具成质检重灾区</span>
+</label>
+
+                        </dd>
+                        <dd class="m-2">
+                            负面
+                        </dd>
+                        <dd class="m-3">
+                            新华网
+                        </dd>
+                        <dd class="m-4">
+                            预警
+                        </dd>
+                        <dd class="m-5">
+                            <span class="date">2016-3-4</span>
+                            <span class="time">11:04:34</span>
+                        </dd>
+                        <dd class="m-6">
+                            <img src="images/icon-star_03.png" alt="">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="main-content">
+                    <div class="zhaiyao">摘要：</div>
+                    <p>“十二五”期间，全国质检系统持续开展农资产品执法打假工作，取得显著成效，为推动现代农业健康持续发展中，发挥了重要作用。一是组织开展“农资打假下乡”行动，二是开展农资打假“质检利剑”行动，三是深入开展区域整治工作，四是开展涉农电商产品打假。同时，我们也要看到当前农资打假工作面临的形势依然严峻，农资打假的工作任务依然艰巨。制售假冒伪劣农资产品违法行为状况仍未从根本上得到扭转，坑农害农。……</p>
+                    <span class="url">链接地址：</span>
+                    <a href="www.baidu.com">http://www.baidu.com</a>
+                </div>
+            </li>
+            <li class="clear">
+                <div class="intro clear">
+                    <dl>
+                        <dd class="m-1 checkbox-group">
+                            
+<input id="id4" type="checkbox" class="hidden-box" value="all" >
+<label for="id4">
+    <span class="check-label-box"></span>
+    <span class="check-label-text">儿童家具成质检重灾区</span>
+</label>
+
+                        </dd>
+                        <dd class="m-2">
+                            正面
+                        </dd>
+                        <dd class="m-3">
+                            新华网
+                        </dd>
+                        <dd class="m-4"></dd>
+                        <dd class="m-5">
+                            <span class="date">2016-3-4</span>
+                            <span class="time">11:04:34</span>
+                        </dd>
+                        <dd class="m-6">
+                            <img src="images/icon-star_03.png" alt="">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="main-content">
+                    <div class="zhaiyao">摘要：</div>
+                    <p>“十二五”期间，全国质检系统持续开展农资产品执法打假工作，取得显著成效，为推动现代农业健康持续发展中，发挥了重要作用。一是组织开展“农资打假下乡”行动，二是开展农资打假“质检利剑”行动，三是深入开展区域整治工作，四是开展涉农电商产品打假。同时，我们也要看到当前农资打假工作面临的形势依然严峻，农资打假的工作任务依然艰巨。制售假冒伪劣农资产品违法行为状况仍未从根本上得到扭转，坑农害农。……</p>
+                    <span class="url">链接地址：</span>
+                    <a href="www.baidu.com">http://www.baidu.com</a>
+                </div>
+            </li>
+            <li class="clear">
+                <div class="intro clear">
+                    <dl>
+                        <dd class="m-1 checkbox-group">
+                            
+<input id="id5" type="checkbox" class="hidden-box" value="all" >
+<label for="id5">
+    <span class="check-label-box"></span>
+    <span class="check-label-text">儿童家具成质检重灾区</span>
+</label>
+
+                        </dd>
+                        <dd class="m-2">
+                            正面
+                        </dd>
+                        <dd class="m-3">
+                            新华网
+                        </dd>
+                        <dd class="m-4"></dd>
+                        <dd class="m-5">
+                            <span class="date">2016-3-4</span>
+                            <span class="time">11:04:34</span>
+                        </dd>
+                        <dd class="m-6">
+                            <img src="images/icon-star_03.png" alt="">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="main-content">
+                    <div class="zhaiyao">摘要：</div>
+                    <p>“十二五”期间，全国质检系统持续开展农资产品执法打假工作，取得显著成效，为推动现代农业健康持续发展中，发挥了重要作用。一是组织开展“农资打假下乡”行动，二是开展农资打假“质检利剑”行动，三是深入开展区域整治工作，四是开展涉农电商产品打假。同时，我们也要看到当前农资打假工作面临的形势依然严峻，农资打假的工作任务依然艰巨。制售假冒伪劣农资产品违法行为状况仍未从根本上得到扭转，坑农害农。……</p>
+                    <span class="url">链接地址：</span>
+                    <a href="www.baidu.com">http://www.baidu.com</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<script>
+    $("#manage_theme").click(function () {
+        location.href = "themeManage.html";
+    });
+    $("#view").click(function () {
+        location.href = "consensusAnalyze.html";
+    });
+</script>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+<script src="js/consensusTrends.js"></script>
+</body>
+</html>
+

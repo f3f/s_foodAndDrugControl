@@ -1,0 +1,82 @@
+
+
+
+<!doctype html>
+<html id="restraurant">
+<head>
+    
+        
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <title>食品药品监管大数据平台</title>
+    
+        <!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/main.css">
+<script src="js/lib/jquery.min.js"></script>
+    
+</head>
+<body>
+<header>
+<div class="header">
+    <i class="logo"></i>
+    <span class="title">食品药品监管大数据平台</span>
+    <a href="index.html" class="back-btn">返回导航页</a>
+</div>
+</header>
+<div class="fixed-section">
+    
+    <article class="main">
+
+    <section class="warp">
+        <div class="search">
+                    <div class="left3">
+                        <input type="text" placeholder="请输入产品名称">
+                    </div>
+                    <div class="left4">
+                        
+<span class="button-border-box">
+    <input id="search" type="button" value="查询">
+</span>
+
+                    </div>
+          </div>
+          <div id='map' class="content"><!--<img src="images/restaurant_03.png">--></div>
+    </section>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YtGeOpkAGIyByVesXYpdoshxw906Vz57"></script>
+<script src="js/charts/baidumap.js"></script>
+<script>
+    $(".content").click(function () {
+        location.href = "foodSafetyTraceabilityDetail.html";
+    });
+    
+  var data=[{
+        Longitude:"116.462389",
+        Latitude:"40.022004",
+        name:"北京市朝阳区大路甲2号",
+        category:"北沙摊中餐厅",
+        address:"北京市朝阳区大路甲2号",
+        telephone:"0000000"
+    },{
+        Longitude:"116.461254",
+        Latitude:"40.027575",
+        name:"123123",
+        category:"北沙摊4中餐厅",
+        address:"北京市朝4124阳区大路甲2号",
+        telephone:"0000012300"
+    }];
+    setMapFoot("map",data);
+</script>
+</article>
+    
+</div>
+<footer></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
