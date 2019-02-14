@@ -1,4 +1,4 @@
-var serviceHost = 'http://img.9cfcf.com';
+var serviceHost = 'https://img.9cfcf.com';
 var localChartDataName = '/chartData.json';
 
 var charts = {
