@@ -1,11 +1,11 @@
 /*!
  * Bubble Cloud Chart v0.1.0
- * http://www.jusfoun.com/
- * http://vis.jusfoun.com/
+ * http://www.xxx.com/
+ * http://vis.xxx.com/
  *
- * Copyright 2016, Jusfoun Data Wealth Inc.
+ * Copyright 2016, xxx Data Wealth Inc.
  * All rights reserved.
- * http://www.jusfoun.com/license
+ * http://www.xxx.com/license
  *
  * Includes D3.js
  * http://d3js.org/
